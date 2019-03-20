@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+//services
+import { PostsService } from './components/recepies/services/posts.service';
 //structure page
 import { AsideComponent } from './structure/aside/aside.component';
 import { HomeComponent } from './structure/home/home.component';
@@ -13,6 +15,7 @@ import { PopularRecepiesComponent } from './components/recepies/popular-recepies
 import { RecepiesComponent } from './components/recepies/recepies.component';
 import { FoodsComponent } from './components/foods/foods.component';
 import { CookbookComponent } from './components/cookbook/cookbook.component';
+import { RecepiesDetailComponent } from './components/recepies/recepies-detail/recepies-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +27,14 @@ import { CookbookComponent } from './components/cookbook/cookbook.component';
     PopularRecepiesComponent,
     RecepiesComponent,
     FoodsComponent,
-    CookbookComponent
+    CookbookComponent,
+    RecepiesDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
